@@ -1,0 +1,23 @@
+import random
+
+r = random.randint(0, 100)
+count = 0
+
+print("\nGuess the number that I have choosen")
+print("The number is between 1 and 100")
+
+while True:
+    num = int(input("\nWhat number have I choosen?\t\t"))
+    count += 1
+
+    if num > r:
+        print("\nThe number I have chossen is lower, try again")
+
+    elif num < r:
+        print("\nThe number I have choosen is higher, try again")
+
+    else:
+        print(f"\nCongratulations! You have guessed the number, I chose {r}")
+        break
+
+print(f"\nNumber of attempts:\t\t{count}")
